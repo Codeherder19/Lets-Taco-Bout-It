@@ -2,13 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import HomePage from './HomePage'
+import Header from './Header';
+import { Route } from 'react-router-dom'
+import RandomTaco from './RandomTaco'
 
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <>
+      <Header />
+      <Route exact path="/" render={ () => {
+        return (
+          <>
+            <HomePage />
+          </>
+        )
+      }} />
+      <Route path="/RandomTaco" render={ () => <RandomTaco /> } />
+    </>
   );
 }
 
