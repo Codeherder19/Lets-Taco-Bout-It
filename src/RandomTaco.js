@@ -21,7 +21,8 @@ class RandomTaco extends React.Component {
   componentDidMount = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
-    currentBaseLayer: data.base_layer,
+    currentBaseLayerName: data.base_layer.name,
+    currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
     currentShell: data.shell,
     currentMixin: data.mixin,
     currentCondiment: data.condiment,
@@ -36,17 +37,32 @@ class RandomTaco extends React.Component {
     return (
       <main className="random-taco-main">
         <div className="recipe-container">
-          <p>{this.state.currentBaseLayer.name}</p>
-          <p>{this.state.currentShell.name}</p>
-          <p>{this.state.currentMixin.name}</p>
-          <p>{this.state.currentCondiment.name}</p>
-          <p>{this.state.currentSeasoning.name}</p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
-          <p></p>
+          <div className="ingredient-container">
+            <p className="ingredient">{this.state.currentBaseLayerName}</p>
+            <p className="ingredient">{this.state.currentBaseLayerRecipe}</p>
+          </div>
+          <div className="ingredient-container">
+            <p className="ingredient">{this.state.currentShell.name}</p>
+            <p className="ingredient">{this.state.currentShell.recipe}</p>
+          </div>
+          <div className="ingredient-container">
+            <p className="ingredient">{this.state.currentMixin.name}</p>
+            <p className="ingredient">{this.state.currentMixin.recipe}</p>
+          </div>
+          <div className="ingredient-container">
+            <p className="ingredient">{this.state.currentCondiment.name}</p>
+            <p className="ingredient">{this.state.currentCondiment.recipe}</p>
+          </div>
+          <div className="ingredient-container">
+            <p className="ingredient">{this.state.currentSeasoning.name}</p>
+            <p className="ingredient">{this.state.currentSeasoning.recipe}</p>
+          </div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
         <div className="button-container">
           <button className="random-taco">Curated Taco</button>

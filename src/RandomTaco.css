@@ -9,11 +9,30 @@
 .recipe-container {
   border: solid black .4rem;
   height: 70%;
-  width: 50%;
+  width: 60%;
   margin: 1rem;
 }
 
 .button-container {
   display: flex;
-  border: solid black .4rem;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.ingredient-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredient {
+  font-size: .85rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.random-taco {
+  font-size: 1.3rem;
+  background-color: #6C969A;
+  color: #F5DBB4;
+  border-radius: .5rem;
 }
