@@ -53,6 +53,8 @@ class RandomTaco extends React.Component {
   .then(response => response.json())
   .then(data => this.setState({
     currentTaco: data,
+    currentTacoName: null,
+    currentTacoRecipe: null,
     currentBaseLayerName: this.capitalizeFirstLetter(data.base_layer.name),
     currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
     currentShellName: this.capitalizeFirstLetter(data.shell.name),
@@ -76,7 +78,7 @@ class RandomTaco extends React.Component {
   render() {
     return (
       <main className="random-taco-main">
-        <div className="recipe-container">
+        <div className="total-recipe-container">
           {this.state.currentTacoName &&
           <div className="title-and-recipe-container">
             <h2 className="curated-title">{this.state.currentTacoName}</h2>
