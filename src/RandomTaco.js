@@ -8,11 +8,17 @@ class RandomTaco extends React.Component {
   constructor() {
     super()
     this.state = {
-      currentBaseLayer: {},
-      currentShell: {},
-      currentMixin: {},
-      currentCondiment: {},
-      currentSeasoning: {},
+      currentTaco: {},
+      currentBaseLayerName: "",
+      currentBaseLayerRecipe: "",
+      currentShellName: "",
+      currentShellRecipe: "",
+      currentMixinName: "",
+      currentMixinRecipe: "",
+      currentCondimentName: "",
+      currentCondimentRecipe: "",
+      currentSeasoningName: "",
+      currentSeasoningRecipe: "",
       savedTacos: [],
       errorMessage: ""
     };
@@ -21,15 +27,21 @@ class RandomTaco extends React.Component {
   componentDidMount = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
+    currentTaco: data,
     currentBaseLayerName: data.base_layer.name,
     currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
-    currentShell: data.shell,
-    currentMixin: data.mixin,
-    currentCondiment: data.condiment,
-    currentSeasoning: data.seasoning
+    currentShellName: data.shell.name,
+    currentShellRecipe: data.shell.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
+    currentMixinName: data.mixin.name,
+    currentMixinRecipe: data.mixin.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
+    currentCondimentName: data.condiment.name,
+    currentCondimentRecipe: data.condiment.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
+    currentSeasoningName: data.seasoning.name,
+    currentSeasoningRecipe: data.seasoning.recipe.replace(/[^.,\sa-zA-Z]/g, '')
   }))
   .catch(error => {
       this.setState({errorMessage: error})
+      .then(console.log(this.state.errorMessage))
     })
 }
 
@@ -42,20 +54,20 @@ class RandomTaco extends React.Component {
             <p className="ingredient">{this.state.currentBaseLayerRecipe}</p>
           </div>
           <div className="ingredient-container">
-            <p className="ingredient">{this.state.currentShell.name}</p>
-            <p className="ingredient">{this.state.currentShell.recipe}</p>
+            <p className="ingredient">{this.state.currentShellName}</p>
+            <p className="ingredient">{this.state.currentShellRecipe}</p>
           </div>
           <div className="ingredient-container">
-            <p className="ingredient">{this.state.currentMixin.name}</p>
-            <p className="ingredient">{this.state.currentMixin.recipe}</p>
+            <p className="ingredient">{this.state.currentMixinName}</p>
+            <p className="ingredient">{this.state.currentMixinRecipe}</p>
           </div>
           <div className="ingredient-container">
-            <p className="ingredient">{this.state.currentCondiment.name}</p>
-            <p className="ingredient">{this.state.currentCondiment.recipe}</p>
+            <p className="ingredient">{this.state.currentCondimentName}</p>
+            <p className="ingredient">{this.state.currentCondimentRecipe}</p>
           </div>
           <div className="ingredient-container">
-            <p className="ingredient">{this.state.currentSeasoning.name}</p>
-            <p className="ingredient">{this.state.currentSeasoning.recipe}</p>
+            <p className="ingredient">{this.state.currentSeasoningName}</p>
+            <p className="ingredient">{this.state.currentSeasoningRecipe}</p>
           </div>
             <p></p>
             <p></p>
