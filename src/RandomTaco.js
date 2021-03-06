@@ -8,19 +8,26 @@ class RandomTaco extends React.Component {
   constructor() {
     super()
     this.state = {
-      currentTaco: {},
+      currentBaseLayer: {},
+      currentShell: {},
+      currentMixin: {},
+      currentCondiment: {},
+      currentSeasoning: {},
       savedTacos: [],
       errorMessage: ""
     };
   }
 
-  componentDidMount = () => {
-  fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
+  componentDidMount = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
-    currentTaco: data,
+    currentBaseLayer: data.base_layer,
+    currentShell: data.shell,
+    currentMixin: data.mixin,
+    currentCondiment: data.condiment,
+    currentSeasoning: data.seasoning
   }))
-.catch(error => {
+  .catch(error => {
       this.setState({errorMessage: error})
     })
 }
@@ -29,11 +36,11 @@ class RandomTaco extends React.Component {
     return (
       <main className="random-taco-main">
         <div className="recipe-container">
-          <h2>{this.state.currentTaco.name}</h2>
-          <p>{this.state.}</p>
-          <p></p>
-          <p></p>
-          <p></p>
+          <p>{this.state.currentBaseLayer.name}</p>
+          <p>{this.state.currentShell.name}</p>
+          <p>{this.state.currentMixin.name}</p>
+          <p>{this.state.currentCondiment.name}</p>
+          <p>{this.state.currentSeasoning.name}</p>
           <p></p>
           <p></p>
           <p></p>
