@@ -28,7 +28,7 @@ class RandomTaco extends React.Component {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  componentDidMount = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
+  fetchWackyTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
     currentTaco: data,
@@ -46,8 +46,11 @@ class RandomTaco extends React.Component {
   .catch(error => {
       this.setState({errorMessage: error})
       .then(console.log(this.state.errorMessage))
-    })
-}
+    })}
+
+  componentDidMount = () => {this.fetchWackyTaco()}
+
+
 
   render() {
 
@@ -80,7 +83,7 @@ class RandomTaco extends React.Component {
             <button className="back-to-home">Back to Home</button>
           </Link>
           <button className="random-taco">Curated Taco</button>
-          <button className="random-taco">WACKY TACO!!!</button>
+          <button className="random-taco" onClick={this.fetchWackyTaco}>WACKY TACO!!!</button>
         </div>
       </main>
     )
