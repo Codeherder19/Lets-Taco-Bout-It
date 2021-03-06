@@ -35,7 +35,6 @@ class RandomTaco extends React.Component {
   .then(data => this.setState({
     currentTaco: data,
     currentTacoName: data.name ? data.name : null,
-    currentTacoRecipe: data.recipe ? data.recipe.replace(/[^.,\sa-zA-Z]/g, '') : null,
     currentBaseLayerName: data.base_layer.name ? this.capitalizeFirstLetter(data.base_layer.name) : null,
     currentBaseLayerRecipe: data.base_layer.recipe ? data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, '') : null,
     currentShellName: data.shell ? this.capitalizeFirstLetter(data.shell.name) : null,
@@ -54,7 +53,6 @@ class RandomTaco extends React.Component {
   .then(data => this.setState({
     currentTaco: data,
     currentTacoName: null,
-    currentTacoRecipe: null,
     currentBaseLayerName: this.capitalizeFirstLetter(data.base_layer.name),
     currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
     currentShellName: this.capitalizeFirstLetter(data.shell.name),
@@ -82,7 +80,6 @@ class RandomTaco extends React.Component {
           {this.state.currentTacoName &&
           <div className="title-and-recipe-container">
             <h2 className="curated-title">{this.state.currentTacoName}</h2>
-            <p className="curated-recipe">{this.state.currentTacoRecipe.replace(this.state.currentTacoName, "")}</p>
           </div>}
           {this.state.currentBaseLayerName &&
           <div className="ingredient-container">
