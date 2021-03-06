@@ -30,6 +30,11 @@ class RandomTaco extends React.Component {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  addTacoToSavedTacos = () => {
+    this.state.savedTacos.push(this.state.currentTaco)
+    console.log(this.state.savedTacos)
+  }
+
   fetchCuratedTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
   .then(response => response.json())
   .then(data => this.setState({
@@ -113,6 +118,7 @@ class RandomTaco extends React.Component {
           </Link>
           <button className="random-taco" onClick={this.fetchCuratedTaco}>Curated Taco</button>
           <button className="random-taco" onClick={this.fetchWackyTaco}>WACKY TACO!!!</button>
+          <button className="save-taco" onClick={this.addTacoToSavedTacos}>Save Taco</button>
         </div>
       </main>
     )
