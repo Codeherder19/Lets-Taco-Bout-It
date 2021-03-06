@@ -2,6 +2,7 @@ import React from 'react';
 // import HomePage from './HomePage'
 import './RandomTaco.css'
 import { Link } from 'react-router-dom';
+import Taco from './Taco'
 // import { getRandomCuratedTaco, getRandomWackyTaco } from './fetchRequests';
 
 class RandomTaco extends React.Component {
@@ -81,37 +82,21 @@ class RandomTaco extends React.Component {
   render() {
     return (
       <main className="random-taco-main">
-        <div className="total-recipe-container">
-          {this.state.currentTacoName &&
-          <div className="title-and-recipe-container">
-            <h2 className="curated-title">{this.state.currentTacoName}</h2>
-          </div>}
-          {this.state.currentBaseLayerName &&
-          <div className="ingredient-container">
-            <h3 className="ingredient-name">{this.state.currentBaseLayerName}:</h3>
-            <p className="ingredient-recipe">{this.state.currentBaseLayerRecipe.replace(`${this.state.currentBaseLayerName.replace(/[^.,\sa-zA-Z]/g, '')}`, "")}`, "")}</p>
-          </div>}
-          {this.state.currentShellName &&
-          <div className="ingredient-container">
-            <h3 className="ingredient-name">{this.state.currentShellName}:</h3>
-            <p className="ingredient-recipe">{this.state.currentShellRecipe.replace(`${this.state.currentShellName.replace(/[^.,\sa-zA-Z]/g, '')}`, "")}</p>
-          </div>}
-          {this.state.currentMixinName &&
-          <div className="ingredient-container">
-            <h3 className="ingredient-name">{this.state.currentMixinName}:</h3>
-            <p className="ingredient-recipe">{this.state.currentMixinRecipe.replace(`${this.state.currentMixinName.replace(/[^.,\sa-zA-Z]/g, '')}`, "")}</p>
-          </div>}
-          {this.state.currentCondimentName &&
-          <div className="ingredient-container">
-            <h3 className="ingredient-name">{this.state.currentCondimentName}:</h3>
-            <p className="ingredient-recipe">{this.state.currentCondimentRecipe.replace(`${this.state.currentCondimentName.replace(/[^.,\sa-zA-Z]/g, '')}`, "")}</p>
-          </div>}
-          {this.state.currentSeasoningName &&
-          <div className="ingredient-container">
-            <h3 className="ingredient-name">{this.state.currentSeasoningName}:</h3>
-            <p className="ingredient-recipe">{this.state.currentSeasoningRecipe.replace(`${this.state.currentSeasoningName.replace(/[^.,\sa-zA-Z]/g, '')}`, "")}</p>
-          </div>}
-        </div>
+        {this.state.currentTaco &&
+        <Taco
+        name={this.state.currentTacoName}
+        baseLayerName={this.state.currentBaseLayerName}
+        baseLayerRecipe={this.state.currentBaseLayerRecipe}
+        shellName={this.state.currentShellName}
+        shellRecipe={this.state.currentShellRecipe}
+        mixinName={this.state.currentMixinName}
+        mixinRecipe={this.state.currentMixinRecipe}
+        condimentName={this.state.currentCondimentName}
+        condimentRecipe={this.state.currentCondimentRecipe}
+        seasoningName={this.state.currentSeasoningName}
+        seasoningRecipe={this.state.currentSeasoningRecipe}
+         />
+          }
         <div className="button-container">
           <Link to="/">
             <button className="back-to-home">Back to Home</button>
