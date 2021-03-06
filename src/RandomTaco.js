@@ -24,13 +24,17 @@ class RandomTaco extends React.Component {
     };
   }
 
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   componentDidMount = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
     currentTaco: data,
-    currentBaseLayerName: data.base_layer.name,
+    currentBaseLayerName: this.capitalizeFirstLetter(data.base_layer.name),
     currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
-    currentShellName: data.shell.name,
+    currentShellName: this.capitalizeFirstLetter(data.shell.name),
     currentShellRecipe: data.shell.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
     currentMixinName: data.mixin.name,
     currentMixinRecipe: data.mixin.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
