@@ -69,14 +69,11 @@ class RandomTaco extends React.Component {
             <p className="ingredient">{this.state.currentSeasoningName}</p>
             <p className="ingredient">{this.state.currentSeasoningRecipe}</p>
           </div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
         </div>
         <div className="button-container">
+          <Link to="/">
+            <button className="back-to-home">Back to Home</button>
+          </Link>
           <button className="random-taco">Curated Taco</button>
           <button className="random-taco">WACKY TACO!!!</button>
         </div>

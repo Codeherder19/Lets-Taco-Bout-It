@@ -19,7 +19,9 @@ img {
 }
 
 .get-random {
-  font-size: 2rem;
+  font-size: 1rem;
+  width: 10rem;
+  height: 3rem;
   background-color: #6C969A;
   color: #F5DBB4;
   border-radius: .5rem;
