@@ -69,7 +69,7 @@ class RandomTaco extends React.Component {
       .then(console.log(this.state.errorMessage))
     })}
 
-  componentDidMount = () => {this.fetchWackyTaco()}
+  componentDidMount = () => {this.fetchCuratedTaco()}
 
 
 
