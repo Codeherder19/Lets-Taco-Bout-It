@@ -84,6 +84,7 @@ class RandomTaco extends React.Component {
       <main className="random-taco-main">
         {this.state.currentTaco &&
         <Taco
+        id={this.state.savedTacos.length + 1}
         name={this.state.currentTacoName}
         baseLayerName={this.state.currentBaseLayerName}
         baseLayerRecipe={this.state.currentBaseLayerRecipe}
