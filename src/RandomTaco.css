@@ -10,14 +10,14 @@
   overflow-y: scroll;
   border: solid black .4rem;
   height: 70%;
-  width: 60%;
+  width: 70%;
   margin: 1rem;
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 50%;
 }
 
 .ingredient-container {
@@ -25,8 +25,15 @@
   justify-content: space-between;
 }
 
-.ingredient {
+.ingredient-recipe {
+  width: 70%;
   font-size: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ingredient-name {
+  width: 30%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -42,6 +49,5 @@
   font-size: 1.3rem;
   background-color: #6C969A;
   color: #F5DBB4;
-  /* height: 5.3rem; */
   border-radius: .5rem;
 }
