@@ -7,7 +7,7 @@ const SavedTacos = (props) => {
   const allTacos = props.savedTacos.map(taco => <TinyTaco
     key={taco.id}
     id={taco.id}
-    name={taco.name || "Randomly Generated Taco"}
+    name={taco.name || `Taco # ${taco.id}`}
    />)
   return (
     <main className="saved-tacos">
