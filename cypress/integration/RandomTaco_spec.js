@@ -51,10 +51,13 @@ describe('Random Taco', () => {
     .get('img').should('have.attr', 'src', 'https://media.istockphoto.com/photos/spicy-homemade-beef-barbacoa-tacos-picture-id960337396?k=6&m=960337396&s=612x612&w=0&h=JHvHpv-7OmGIklZd1qWPsQ_OfwwKiheorszp143RVg8=')
   })
 
-  // it('should have buttons that generate either a random curated taco or a wacky taco', () => {
-  //
-  // })
-  //
+  it('should have buttons that generate either a random curated taco or a wacky taco', () => {
+    cy
+    .get('.random-curated-taco').contains('Curated Taco')
+    cy
+    .get('.random-wacky-taco').contains('WACKY TACO!!!')
+  })
+
   // it('should have a button to save a taco to be viewed later', () => {
   //
   // })
