@@ -17,6 +17,11 @@ describe('Random Taco', () => {
     .get('.curated-title').contains('Randomly Generated Taco')
   })
 
+  it('should have a section title', () => {
+    cy
+    .get('.section-title').contains('Random Taco Generator')
+  })
+
   it('should always have at least one ingredient and one ingredient recipe for a curated taco', () => {
     cy
     .get('.ingredient-name')
@@ -58,12 +63,18 @@ describe('Random Taco', () => {
     .get('.random-wacky-taco').contains('WACKY TACO!!!')
   })
 
-  // it('should have a button to save a taco to be viewed later', () => {
-  //
-  // })
-  //
-  // it('should have a button that takes a user to view saved tacos', () => {
-  //
-  // })
+  it('should have a button to save a taco which renders a message to notify user they have saved a taco', () => {
+    cy
+    .get('.save-taco').contains('Save Taco').click()
+    cy
+    .get('.successful-save').contains('YOU SAVED A RECIPE!')
+  })
+
+  it('should have a button that takes a user to view saved tacos', () => {
+    cy
+    .get('.view-saved-tacos').contains('View Saved').click()
+    cy
+    .get('.section-title').contains('Saved Tacos')
+  })
 
 });
