@@ -24,4 +24,13 @@ describe('Header', () => {
     cy
     .get('div[class=total-recipe-container]').find('h2[class=curated-title]')
   })
+
+  it('should have a header that persists in this random taco component', () => {
+    cy
+    .get('button[class=get-random]').contains('GET RANDOM')
+    cy
+    .get('button[class=get-random]').click()
+    cy
+    .get('header').contains(`LET'S TACO 'BOUT IT!`)
+  })
 });
