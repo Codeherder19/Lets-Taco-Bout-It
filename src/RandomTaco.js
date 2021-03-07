@@ -33,9 +33,9 @@ class RandomTaco extends React.Component {
   }
 
   addTacoToSavedTacos = () => {
-    const tacoToBeSaved = this.state.currentTaco
-    tacoToBeSaved.id = this.state.savedTacos.length + 1
-    this.state.updateSavedTacos(tacoToBeSaved)
+    const tacoToBeSaved = this.state.currentTaco;
+    tacoToBeSaved.id = this.state.savedTacos.length + 1;
+    this.state.updateSavedTacos(tacoToBeSaved);
   }
 
   fetchCuratedTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
@@ -84,6 +84,7 @@ class RandomTaco extends React.Component {
   render() {
     return (
       <main className="random-taco-main">
+        <h2 className="section-title">Random Taco Generator</h2>
         {this.state.currentTaco &&
         <Taco
         id={this.state.savedTacos.length + 1}
