@@ -18,7 +18,9 @@ class App extends React.Component {
   }
 
   updateSavedTacos = (savedTaco) => {
+    savedTaco.id = this.state.savedTacos.length + 1
     this.setState({savedTacos: [...this.state.savedTacos, savedTaco]})
+    console.log(this.state.savedTacos)
   }
 
   render() {
@@ -32,7 +34,7 @@ class App extends React.Component {
           </>
         )
       }} />
-      <Route path="/RandomTaco" render={ () => <RandomTaco updateSavedTacos={this.updateSavedTacos}/> } />
+      <Route path="/RandomTaco" render={ () => <RandomTaco updateSavedTacos={this.updateSavedTacos} /> } />
       <Route path="/SavedTacos" render={ () => <SavedTacos savedTacos={this.state.savedTacos}/> } />
     </>
   );
