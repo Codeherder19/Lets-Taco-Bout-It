@@ -16,4 +16,11 @@ describe('Random Taco', () => {
     cy
     .get('.curated-title').contains('Randomly Generated Taco')
   })
+
+  it('should always have at least one ingredient and one ingredient recipe for a curated taco', () => {
+    cy
+    .get('.ingredient-name')
+    cy
+    .get('.ingredient-recipe')
+  })
 });
