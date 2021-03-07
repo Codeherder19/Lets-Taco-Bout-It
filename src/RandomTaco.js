@@ -104,8 +104,8 @@ class RandomTaco extends React.Component {
           <Link to="/">
             <button className="back-to-home">Back to Home</button>
           </Link>
-          <button className="random-taco" onClick={this.fetchCuratedTaco}>Curated Taco</button>
-          <button className="random-taco" onClick={this.fetchWackyTaco}>WACKY TACO!!!</button>
+          <button className="random-curated-taco" onClick={this.fetchCuratedTaco}>Curated Taco</button>
+          <button className="random-wacky-taco" onClick={this.fetchWackyTaco}>WACKY TACO!!!</button>
           <button className="save-taco" onClick={this.addTacoToSavedTacos}>Save Taco</button>
           <Link to="/SavedTacos">
             <button className="view-saved-tacos">View Saved</button>
