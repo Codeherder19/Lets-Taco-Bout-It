@@ -35,4 +35,9 @@
 
 .section-title {
   font-size: 2rem;
+  margin-top: 0%;
+}
+
+.successful-save {
+  margin: 0%;
 }
