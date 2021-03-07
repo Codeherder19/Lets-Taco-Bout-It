@@ -41,7 +41,7 @@ class RandomTaco extends React.Component {
   .then(response => response.json())
   .then(data => this.setState({
     currentTaco: data,
-    currentTacoName: data.name ? data.name : null,
+    currentTacoName: data.name,
     currentBaseLayerName: data.base_layer.name ? this.capitalizeFirstLetter(data.base_layer.name) : null,
     currentBaseLayerRecipe: data.base_layer.recipe ? data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, '') : null,
     currentShellName: data.shell ? this.capitalizeFirstLetter(data.shell.name) : null,
@@ -59,7 +59,7 @@ class RandomTaco extends React.Component {
   .then(response => response.json())
   .then(data => this.setState({
     currentTaco: data,
-    currentTacoName: null,
+    currentTacoName: "Randomly Generated Taco",
     currentBaseLayerName: this.capitalizeFirstLetter(data.base_layer.name),
     currentBaseLayerRecipe: data.base_layer.recipe.replace(/[^.,\sa-zA-Z]/g, ''),
     currentShellName: this.capitalizeFirstLetter(data.shell.name),
