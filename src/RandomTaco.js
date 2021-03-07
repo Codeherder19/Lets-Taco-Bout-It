@@ -24,7 +24,8 @@ class RandomTaco extends React.Component {
       currentSeasoningName: null,
       currentSeasoningRecipe: null,
       savedTacos: [],
-      errorMessage: null
+      errorMessage: null,
+      savedTaco: false
     };
   }
 
@@ -36,11 +37,13 @@ class RandomTaco extends React.Component {
     const tacoToBeSaved = this.state.currentTaco;
     tacoToBeSaved.id = this.state.savedTacos.length + 1;
     this.state.updateSavedTacos(tacoToBeSaved);
+    this.setState({savedTaco: true})
   }
 
   fetchCuratedTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
   .then(response => response.json())
   .then(data => this.setState({
+    savedTaco: false,
     currentTaco: data,
     currentTacoName: data.name,
     currentBaseLayerName: data.base_layer.name ? this.capitalizeFirstLetter(data.base_layer.name) : null,
@@ -59,6 +62,7 @@ class RandomTaco extends React.Component {
   fetchWackyTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/')
   .then(response => response.json())
   .then(data => this.setState({
+    savedTaco: false,
     currentTaco: data,
     currentTacoName: "Randomly Generated Taco",
     currentBaseLayerName: this.capitalizeFirstLetter(data.base_layer.name),
@@ -85,6 +89,8 @@ class RandomTaco extends React.Component {
     return (
       <main className="random-taco-main">
         <h2 className="section-title">Random Taco Generator</h2>
+        {this.state.savedTaco &&
+        <h2 className="successful-save">YOU SAVED A RECIPE!</h2>}
         {this.state.currentTaco &&
         <Taco
         id={this.state.savedTacos.length + 1}
