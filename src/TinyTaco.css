@@ -1,0 +1,24 @@
+.tiny-taco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: .5rem;
+  border: solid black 2px;
+  height: 16rem;
+  width: 16rem;
+}
+
+.tiny-taco-name {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  font-size: 1rem;
+}
+
+.tiny-taco-image {
+  border: solid black 2px;
+  height: 60%;
+  width: 80%;
+  margin: 0%;
+  object-fit: cover;
+}
