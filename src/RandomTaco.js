@@ -3,12 +3,16 @@ import React from 'react';
 import './RandomTaco.css'
 import { Link } from 'react-router-dom';
 import Taco from './Taco'
+// import SavedTacos from './SavedTacos'
+import { Route } from 'react-router-dom'
+
 // import { getRandomCuratedTaco, getRandomWackyTaco } from './fetchRequests';
 
 class RandomTaco extends React.Component {
-  constructor() {
+  constructor({updateSavedTacos}) {
     super()
     this.state = {
+      updateSavedTacos: updateSavedTacos,
       currentTaco: {},
       currentTacoName: null,
       currentTacoRecipe: null,
@@ -34,8 +38,7 @@ class RandomTaco extends React.Component {
   addTacoToSavedTacos = () => {
     const tacoToBeSaved = this.state.currentTaco
     tacoToBeSaved.id = this.state.savedTacos.length + 1
-    this.state.savedTacos.push(tacoToBeSaved)
-    console.log(this.state.savedTacos)
+    this.state.updateSavedTacos(tacoToBeSaved)
   }
 
   fetchCuratedTaco = () => {fetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
@@ -107,6 +110,9 @@ class RandomTaco extends React.Component {
           <button className="random-taco" onClick={this.fetchCuratedTaco}>Curated Taco</button>
           <button className="random-taco" onClick={this.fetchWackyTaco}>WACKY TACO!!!</button>
           <button className="save-taco" onClick={this.addTacoToSavedTacos}>Save Taco</button>
+          <Link to="/SavedTacos">
+            <button className="view-saved-tacos">View Saved</button>
+          </Link>
         </div>
       </main>
     )
