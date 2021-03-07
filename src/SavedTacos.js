@@ -1,12 +1,18 @@
 import React from 'react';
 import './SavedTacos.css'
 import { Link } from 'react-router-dom';
+import TinyTaco from './TinyTaco'
 
 const SavedTacos = (props) => {
-  console.log(props)
+  console.log(props.savedTacos)
+  const allTacos = props.savedTacos.map(taco => <TinyTaco
+    key={taco.id}
+    id={taco.id}
+    name={taco.name || "Randomly Generated Taco"}
+   />)
   return (
     <main className="saved-tacos">
-      <h1>Saved Tacos</h1>
+      <div className="tiny-taco-container">{allTacos}</div>
       <Link to="/RandomTaco">
         <button className="back-to-random">Back to Random Taco Generator</button>
       </Link>
