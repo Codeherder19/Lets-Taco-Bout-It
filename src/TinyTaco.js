@@ -3,7 +3,6 @@ import './TinyTaco.css'
 // import { Link } from 'react-router-dom';
 
 const TinyTaco = (props) => {
-  console.log(props)
   return (
     <div className="tiny-taco">
       <h2 className="tiny-taco-name">{props.name}</h2>

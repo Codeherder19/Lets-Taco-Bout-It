@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import TinyTaco from './TinyTaco'
 
 const SavedTacos = (props) => {
-  console.log(props.savedTacos)
   const allTacos = props.savedTacos.map(taco => <TinyTaco
     key={taco.id}
     id={taco.id}
