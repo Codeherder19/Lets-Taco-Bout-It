@@ -12,7 +12,8 @@
   width: 50%;
 }
 
-.random-taco,
+.random-curated-taco,
+.random-wacky-taco,
 .save-taco
  {
   font-size: 1.3rem;
