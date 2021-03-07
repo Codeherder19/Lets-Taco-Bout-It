@@ -16,5 +16,12 @@ describe('Header', () => {
     .get('p[class=app-description]').contains(`Welcome to Let's Taco 'Bout it`)
   })
 
-
+  it('should have a button that navigates to the random taco component', () => {
+    cy
+    .get('button[class=get-random]').contains('GET RANDOM')
+    cy
+    .get('button[class=get-random]').click()
+    cy
+    .get('div[class=total-recipe-container]').find('h2[class=curated-title]')
+  })
 });
