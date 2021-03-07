@@ -15,7 +15,8 @@
 
 
 .random-taco,
-.save-taco {
+.save-taco
+ {
   font-size: 1.3rem;
   width: 10rem;
   background-color: #6C969A;
@@ -23,7 +24,8 @@
   border-radius: .5rem;
 }
 
-.back-to-home {
+.back-to-home,
+.view-saved-tacos {
   font-size: 1.3rem;
   width: 10rem;
   height: 100%;
