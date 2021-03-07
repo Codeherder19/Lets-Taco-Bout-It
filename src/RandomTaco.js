@@ -3,9 +3,6 @@ import React from 'react';
 import './RandomTaco.css'
 import { Link } from 'react-router-dom';
 import Taco from './Taco'
-// import SavedTacos from './SavedTacos'
-import { Route } from 'react-router-dom'
-
 // import { getRandomCuratedTaco, getRandomWackyTaco } from './fetchRequests';
 
 class RandomTaco extends React.Component {
