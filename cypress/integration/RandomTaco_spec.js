@@ -23,4 +23,25 @@ describe('Random Taco', () => {
     cy
     .get('.ingredient-recipe')
   })
+
+  it('should always have 5 ingredients for a wacky taco', () => {
+    cy
+    .get('.random-wacky-taco').click()
+    cy
+    .get('.total-recipe-container').within(() => {
+    cy
+    .get('h3')
+    .should(($h3) => {
+      expect($h3).to.have.length(5)
+      })
+    })
+    .get('.total-recipe-container').within(() => {
+    cy
+    .get('p')
+    .should(($p) => {
+      expect($p).to.have.length(5)
+      })
+    })
+  })
+
 });
