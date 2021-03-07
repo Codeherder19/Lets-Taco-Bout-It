@@ -1,4 +1,4 @@
-describe('Header', () => {
+describe('Home Page', () => {
   const baseUrl = 'http://localhost:3000';
 
   beforeEach(() => {
