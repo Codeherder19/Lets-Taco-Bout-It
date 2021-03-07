@@ -32,8 +32,9 @@ class RandomTaco extends React.Component {
   }
 
   addTacoToSavedTacos = () => {
-    this.state.currentTaco.id = this.state.savedTacos.length + 1
-    this.state.savedTacos.push(this.state.currentTaco)
+    const tacoToBeSaved = this.state.currentTaco
+    tacoToBeSaved.id = this.state.savedTacos.length + 1
+    this.state.savedTacos.push(tacoToBeSaved)
     console.log(this.state.savedTacos)
   }
 
