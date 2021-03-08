@@ -14,6 +14,15 @@ describe('Random Taco', () => {
     cy
     .get('.section-title').contains('Saved Tacos')
   })
+
+  it('should have a button which navigates ueer back to random taco component from saved view', () => {
+    cy
+    .get('.view-saved-tacos').click()
+    cy
+    .get('.back-to-random').click()
+    cy
+    .get('.section-title').contains('Random Taco Generator')
+  })
     /*
     test 2 should have back button which navigates back to random taco component
     get view saved and click
