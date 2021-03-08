@@ -1,11 +1,19 @@
 header {
   display: flex;
+  border-bottom: 2px;
+  /* border-style: groove; */
   justify-content: center;
   background-color: #F98A7E;
   border: solid #F98A7E .7rem;
+
 }
 
 h1 {
+  width: 40%;
+  border-radius: 5px;
+  border-style: groove;
+  text-align: center;
+  background-color: #414240;
   font-size: 2rem;
   color: #4CC6B3;
 }
