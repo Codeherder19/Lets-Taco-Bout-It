@@ -12,7 +12,7 @@ const SavedTacos = (props) => {
   return (
     <main className="saved-tacos">
       <h2 className="section-title">Saved Tacos</h2>
-      <div className="tiny-taco-container">{allTacos}</div>
+      <section className="tiny-taco-container">{allTacos}</section>
       <Link to="/RandomTaco">
         <button className="back-to-random">Back to Random Taco Generator</button>
       </Link>
