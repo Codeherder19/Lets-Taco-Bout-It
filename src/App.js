@@ -20,7 +20,6 @@ class App extends React.Component {
   updateSavedTacos = (savedTaco) => {
     savedTaco.id = this.state.savedTacos.length + 1
     this.setState({savedTacos: [...this.state.savedTacos, savedTaco]})
-    console.log(this.state.savedTacos)
   }
 
   render() {

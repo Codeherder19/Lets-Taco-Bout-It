@@ -12,7 +12,8 @@
   width: 50%;
 }
 
-.random-taco,
+.random-curated-taco,
+.random-wacky-taco,
 .save-taco
  {
   font-size: 1.3rem;
@@ -30,4 +31,13 @@
   background-color: #6C969A;
   color: #F5DBB4;
   border-radius: .5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-top: 0%;
+}
+
+.successful-save {
+  margin: 0%;
 }
