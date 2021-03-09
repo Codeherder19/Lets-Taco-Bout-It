@@ -1,5 +1,8 @@
-import React from 'react'
-import './Taco.css'
+import React from 'react';
+import './Taco.css';
+import PropTypes from 'prop-types';
+
+
 
 const Taco = ({name, baseLayerName, baseLayerRecipe, shellName, shellRecipe, mixinName, mixinRecipe, condimentName, condimentRecipe, seasoningName, seasoningRecipe}) => {
   return (
@@ -35,6 +38,20 @@ const Taco = ({name, baseLayerName, baseLayerRecipe, shellName, shellRecipe, mix
       </div>}
     </div>
   )
+}
+
+Taco.propTypes = {
+  name: PropTypes.string,
+  baseLayerName: PropTypes.string,
+  baseLayerRecipe:PropTypes.string,
+  shellName: PropTypes.string,
+  shellRecipe: PropTypes.string,
+  mixinName: PropTypes.string,
+  mixinRecipe: PropTypes.string,
+  condimentName: PropTypes.string,
+  condimentRecipe: PropTypes.string,
+  seasoningName: PropTypes.string,
+  seasoningRecipe: PropTypes.string
 }
 
 
