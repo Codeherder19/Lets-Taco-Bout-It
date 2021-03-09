@@ -2,6 +2,7 @@ import React from 'react';
 import './SavedTacos.css'
 import { Link } from 'react-router-dom';
 import Taco from './Taco'
+import PropTypes from 'prop-types';
 
 const SavedTacos = ({savedTacos, deleteSaved}) => {
 
@@ -12,7 +13,7 @@ const SavedTacos = ({savedTacos, deleteSaved}) => {
         <div className="saved-taco">
         <Taco
           id={taco.id}
-          key={taco.name}
+          key={Math.random() * 10000000}
           name={taco.name || `Taco #${taco.id}`}
           baseLayerName={taco.base_layer.name}
           baseLayerRecipe={taco.base_layer.recipe}
@@ -25,7 +26,7 @@ const SavedTacos = ({savedTacos, deleteSaved}) => {
           seasoningName={taco.seasoning ? taco.seasoning.name : ""}
           seasoningRecipe={taco.seasoning ? taco.seasoning.recipe : ""}
         />
-        <button className="delete-taco" id={taco.id} onClick={ (event) => {deleteSaved(event.target.id)}}>Delete Taco</button>
+        <button className="delete-taco" id={taco.id} key={Math.random() * 10000000} onClick={ (event) => {deleteSaved(event.target.id)}}>Delete Taco</button>
         </div>
       )
       })
@@ -41,6 +42,11 @@ const SavedTacos = ({savedTacos, deleteSaved}) => {
       </Link>
     </main>
   )
+}
+
+SavedTacos.propTypes = {
+  savedTacos: PropTypes.array,
+  deleteSaved: PropTypes.func
 }
 
 export default SavedTacos;

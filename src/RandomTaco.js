@@ -94,6 +94,7 @@ class RandomTaco extends React.Component {
         {this.state.currentTaco &&
         <Taco
         id={this.state.savedTacos.length + 1}
+        key={Math.random() * 10000000}
         name={this.state.currentTacoName}
         baseLayerName={this.state.currentBaseLayerName}
         baseLayerRecipe={this.state.currentBaseLayerRecipe}
