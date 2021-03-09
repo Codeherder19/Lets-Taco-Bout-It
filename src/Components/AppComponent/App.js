@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
-import HomePage from './HomePage'
-import Header from './Header';
+import HomePage from '../HomePageComponent/HomePage'
+import Header from '../HeaderComponent/Header';
 import { Route } from 'react-router-dom'
-import RandomTaco from './RandomTaco'
-import SavedTacos from './SavedTacos'
+import RandomTaco from '../RandomTacoComponent/RandomTaco'
+import SavedTacos from '../SavedTacosComponent/SavedTacos'
 
 
 

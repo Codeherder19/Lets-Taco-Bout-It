@@ -1,7 +1,7 @@
 import React from 'react';
 import './SavedTacos.css'
 import { Link } from 'react-router-dom';
-import Taco from './Taco'
+import Taco from '../TacoComponent/Taco'
 import PropTypes from 'prop-types';
 
 const SavedTacos = ({savedTacos, deleteSaved}) => {
