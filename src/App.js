@@ -22,6 +22,12 @@ class App extends React.Component {
     this.setState({savedTacos: [...this.state.savedTacos, savedTaco]})
   }
 
+  deleteTaco = (id) => {
+    // console.log(typeof id)
+    const tacosToRender = this.state.savedTacos.filter(taco => taco.id !== parseInt(id))
+    this.setState({savedTacos: tacosToRender})
+  }
+
   render() {
   return (
     <>
@@ -34,7 +40,7 @@ class App extends React.Component {
         )
       }} />
       <Route path="/RandomTaco" render={ () => <RandomTaco updateSavedTacos={this.updateSavedTacos} /> } />
-      <Route path="/SavedTacos" render={ () => <SavedTacos savedTacos={this.state.savedTacos}/> } />
+      <Route path="/SavedTacos" render={ () => <SavedTacos savedTacos={this.state.savedTacos} deleteSaved={this.deleteTaco}/> } />
     </>
   );
 }

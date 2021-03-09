@@ -9,11 +9,12 @@
 .app-description {
   width: 40%;
   font-size: 1.5rem;
-  color: #F45656;
+  color: #E10926;
   align-self: center;
 }
 
 img {
+  border-style: groove;
   margin-top: 1rem;
   border-radius: 1rem;
 }
@@ -23,6 +24,6 @@ img {
   width: 10rem;
   height: 3rem;
   background-color: #6C969A;
-  color: #F5DBB4;
+  color: #black;
   border-radius: .5rem;
 }
