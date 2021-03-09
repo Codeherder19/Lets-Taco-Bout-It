@@ -1,9 +1,7 @@
 import React from 'react';
-// import HomePage from './HomePage'
 import './RandomTaco.css'
 import { Link } from 'react-router-dom';
 import Taco from '../TacoComponent/Taco'
-// import { getRandomCuratedTaco, getRandomWackyTaco } from './fetchRequests';
 
 class RandomTaco extends React.Component {
   constructor({updateSavedTacos}) {
