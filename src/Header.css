@@ -8,11 +8,19 @@ header {
 }
 
 h1 {
-  width: 40%;
+  max-width: 750px;
   border-radius: 5px;
   border-style: groove;
   text-align: center;
   background-color: #414240;
   font-size: 2rem;
   color: #4CC6B3;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    max-width: 200px;
+    font-size: 1rem;
+
+  }
 }

@@ -23,7 +23,6 @@ class App extends React.Component {
   }
 
   deleteTaco = (id) => {
-    // console.log(typeof id)
     const tacosToRender = this.state.savedTacos.filter(taco => taco.id !== parseInt(id))
     this.setState({savedTacos: tacosToRender})
   }
