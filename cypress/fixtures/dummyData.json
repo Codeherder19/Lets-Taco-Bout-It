@@ -1,0 +1,23 @@
+{
+    "base_layer_url": "https://raw.github.com/sinker/tacofancy/master/base_layers/zucchini_corn.md",
+    "recipe": "Zucchini and Corn Tacos\n=======================\n\nVegetarian; vegan without cheese\n--------------------------------\n\n1. Prepare the [Zucchini & Corn Filling](/base_layers/zucchini_corn.md)\n2. Add optional salsa (tomatillo is best, like the [Simple Salsa Verde](/condiments/simple_salsa_verde.md))\n3. Serve in corn tortillas, topped with optional cheese (queso fresco if possible)\n\ntags: vegetarian, vegan\n",
+    "name": "Zucchini and Corn Tacos",
+    "condiment": {
+        "slug": "simple_salsa_verde",
+        "recipe": "Simple Salsa Verde\n==================\n\nI got this base recipe from a vegan friend. If you can't find one of these peppers, swap in another one!\n\n* 6 Average-sized tomatillos\n* 1 Poblano pepper\n* 1 Serrano pepper\n* 1 Jalapeno pepper\n* 1 Sweet red pepper\n* Juice of 1 or 2 fresh-squeezed limes (to taste)\n* Pinch or two kosher salt (to taste)\n\nYou're in charge of the heat here. For a milder salsa, remove all the ribs and seeds inside the peppers. For medium, leave in a few ribs, and for hot, go nuts. Rough chop the peppers and tomatillos, then throw into a blender or food processor with salt and lime juice. Pulse to desired consistency.\n\nAs with most salsas, this will taste better if you let it sit in the fridge for a few hours before eating. It's great on chips or drizzled over steak or pork tacos.\n\ntags: vegetarian, vegan\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/condiments/simple_salsa_verde.md",
+        "name": "Simple Salsa Verde"
+    },
+    "slug": "zucchini_and_corn_tacos",
+    "url": "https://raw.github.com/sinker/tacofancy/master/full_tacos/zucchini_corn_tacos.md",
+    "shell_url": null,
+    "base_layer": {
+        "slug": "zucchini_and_corn_filling",
+        "recipe": "Zucchini and Corn Filling\n=========================\n\nVegan\n-----\n\n__Ingredients__\n\n* Diced zucchini\n* White or yellow corn kernels\n* Chopped white onion\n* Chopped tomatoes\n* Finely chopped garlic\n* Black beans (you can even use [Garlic Black Beans](/base_layers/garlic_black_beans.md))\n* Finely chopped oregano or Epazote\n\n__Directions__\n\n1. Toast corn in a skillet over high heat with oil and salt for about 5 minutes. Remove corn.\n2. Cook onion in the skillet until it caramelizes (about 5 minutes). Leave onion in there.\n3. Add garlic, cook another 1 or 2 minutes.\n4. Add diced tomatoes, cook for 8-10 minutes.\n5. Add zucchini, cook until it's tender.\n6. Add corn back in.\n7. Add black beans, Epazote; add salt, pepper, and other seasonings to taste. Cook for 3-4 more minutes.\n\ntags: vegetarian, vegan\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/base_layers/zucchini_corn.md",
+        "name": "Zucchini and Corn Filling"
+    },
+    "mixin_url": null,
+    "seasoning_url": null,
+    "condiment_url": "https://raw.github.com/sinker/tacofancy/master/condiments/simple_salsa_verde.md"
+}

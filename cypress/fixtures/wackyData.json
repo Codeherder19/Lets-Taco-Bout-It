@@ -1,0 +1,32 @@
+{
+    "condiment": {
+        "slug": "salsa_de_aguacate",
+        "recipe": "Salsa de Aguacate\n==========\n\nThis is the traditional green sauce served from a Mexican taco cart. Very popular with Tacos al Pastór or Tacos de Canasta, it is a creamy, green sauce. It has avacado, but it by no means a guacamole. Usually available with other taco cart staples such as: sliced radishes, spicy salsa roja, fresh cilantro, and fresh limes.\n\n* 1/2 Kilo of Green Tomatillos (~1lb.)\n* 2 green Serrano peppers (optional for heat)\n* 1 avocado\n* 2 limes\n* 1/2 cup crema (Mexican sour cream, thinner and sweeter than standard sour cream)\n\nCook the tomatillos and peppers in a pot with water until soft. Drain the water out and let cool.\n\nPut tomatillos, peppers, salt, lime-juice, crema, and avacado (shelled and pitted) in blender. With lid on, blend until completely mixed and liquid consistency. Salsa should be the consistency of crema, liquid, yet slightly viscous.\n\nPour over your tacos liberally. Refrigerate between uses.\n\ntags: vegetarian\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/condiments/salsa_de_aguacate.md",
+        "name": "Salsa de Aguacate"
+    },
+    "shell": {
+        "slug": "fresh_corn_tortillas",
+        "recipe": "Fresh Corn Tortillas\n===================\n\nThis is the only way to go. So worth it. Makes roughly 15 tortillas.\n\n* 1 3/4 cups masa harina\n* 1 1/8 cups water\n\n1. In a medium bowl, mix together masa harina and hot water until thoroughly combined. Turn dough onto a clean surface and knead until pliable and smooth. If dough is too sticky, add more masa harina; if it begins to dry out, sprinkle with water. Cover dough tightly with plastic wrap and allow to stand for 30 minutes.\n2. Preheat a cast iron skillet or griddle to medium-high.\n3. Divide dough into 15 equal-size balls. Using a tortilla press (or a rolling pin), press each ball of dough flat between two sheets of wax paper (plastic wrap or a freezer bag cut into halves will also work).\n4. Place tortilla in preheated pan and allow to cook for approximately 30 seconds, or until browned and slightly puffy. Turn tortilla over to brown on second side for approximately 30 seconds more, then transfer to a plate. Repeat process with each ball of dough. Keep tortillas covered with a towel to stay warm and moist (or a low temp oven) until ready to serve.\n\ntags: vegetarian, vegan\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/shells/Fresh_corn_tortillas.md",
+        "name": "Fresh Corn Tortillas"
+    },
+    "base_layer": {
+        "slug": "baked_tilapia",
+        "recipe": "Baked Tilapia\n=============\n\nOven fried fish for when you think you want to pretend you're eating healthier.\n\n* 1 pound mild fish (I usually use tilapia)\n* 1 cup masa\n* 2 tsp salt\n* 1/2 to 1 tsp cayenne\n* 2 tsp paprika\n* 2 tsps chili powder\n* 2 tsps garlic powder\n* 1/2 to 1 tsp black pepper (to taste)\n* olive oil\n\n\n1. Preheat oven to 400 degrees.\n2. Mix dry ingredients in a bowl to make the coating for the fish.\n3. Cut fish into slices or chunks, as your taste desires. \n4. Drizzle olive oil over cut fish, and dip fish into breading.\n5. Bake for 8ish minutes and finish, if you can, under the broiler.",
+        "url": "https://raw.github.com/sinker/tacofancy/master/base_layers/baked_tilapia.md",
+        "name": "Baked Tilapia"
+    },
+    "seasoning": {
+        "slug": "packaged_seasonings",
+        "recipe": "Packaged Seasonings\n==============\n\nLest we be accused of snobbery, let's acknowledge that a taco is a taco, and taco night can be well-served by not having to think at all.\n\nFeel free to use the pre-packaged seasoning of your choice. When I'm in an old-school mood, I head straight for...\n\n* Old El Paso Taco Seasoning\n\ntags: vegetarian, vegan\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/seasonings/packaged_seasonings.md",
+        "name": "Packaged Seasonings"
+    },
+    "mixin": {
+        "slug": "corn_salad",
+        "recipe": "Corn Salad\n==========\n\n* 2 Ears of corn\n* 1 Lime, juiced\n* Small handful of Cilantro, chopped\n* A few green onions, chopped\n* Garlic salt, or Garlic AND salt. I use Trader Joe's Garlic Salt in the grinder usually.\n\nCut the corn off of the cob, and in a mixing bowl mix together corn, lime juice, chopped cilantro and garlic salt. You can tweak any of this stuff as desired.\n\n---\nThis is my first Github commit. I'm glad it's taco related.\n\ntags: vegetarian, vegan\n",
+        "url": "https://raw.github.com/sinker/tacofancy/master/mixins/Corn_Salad.md",
+        "name": "Corn Salad"
+    }
+}
