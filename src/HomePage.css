@@ -31,7 +31,7 @@ img {
 @media screen and (max-width: 640px) {
   img,
   .app-description {
-    max-width:300px;
+    max-width: 300px;
     font-size: 1rem;
   }
 
