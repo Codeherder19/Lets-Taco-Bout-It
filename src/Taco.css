@@ -4,11 +4,13 @@
   align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
-  border: solid black .4rem;
-  min-width: 670px;
+  border: solid black .6rem;
+  min-width: 640px;
   height: 70%;
   width: 70%;
   margin: 1rem;
+  border-radius: 5px;
+  background-color: #B04E65;
 }
 
 .title-and-recipe-container {
@@ -16,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
+  color: #F6E9BB;
 }
 
 .ingredient-container {
@@ -26,13 +29,25 @@
 
 .ingredient-recipe {
   width: 70%;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  color: #F6E9BB
 }
 
 .ingredient-name {
+  font-size: 1.5rem;
   width: 30%;
   padding-left: 1rem;
   padding-right: 1rem;
+  color: #F6E9BB
+}
+
+.delete-taco {
+  font-size: 1.3rem;
+  width: 10rem;
+  height: 100%;
+  background-color: #6C969A;
+  color: black;
+  border-radius: .5rem;
 }

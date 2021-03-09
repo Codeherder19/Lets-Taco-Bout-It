@@ -8,9 +8,8 @@ const SavedTacos = ({savedTacos, deleteSaved}) => {
   const allTacos = () => {
     if (savedTacos.length) {
       return savedTacos.map(taco => {
-        console.log(taco)
         return (
-        <div>
+        <div className="saved-taco">
         <Taco
           id={taco.id}
           key={taco.name}
@@ -26,7 +25,7 @@ const SavedTacos = ({savedTacos, deleteSaved}) => {
           seasoningName={taco.seasoning ? taco.seasoning.name : ""}
           seasoningRecipe={taco.seasoning ? taco.seasoning.recipe : ""}
         />
-        <button className="delete-taco" id={taco.id} onClick={ (event) => {deleteSaved(event.target.id)}}>Remove</button>
+        <button className="delete-taco" id={taco.id} onClick={ (event) => {deleteSaved(event.target.id)}}>Delete Taco</button>
         </div>
       )
       })
