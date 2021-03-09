@@ -1,10 +1,14 @@
-# Grouch Potato
+# LET'S TACO 'BOUT IT
 
 ## Overview
 Let's Taco 'Bout It makes fetch calls tp the Taco Fancy api which has two end points. One generates a curated taco from a contributor, and the other randomly combines a base layer, mixin, condiment, seasoning, and shell. A user can save recipes and then click a button to view these saved recipes, with the option to delete them with a button click as well.
 
 ## Screenshot
-![Desktop View]([Imgur](https://i.imgur.com/vT7tXT7.png))</br>
+![Desktop View](https://i.imgur.com/vT7tXT7.png)</br>
+![Desktop View](https://i.imgur.com/wnJ6Mbv.png)</br>
+![Desktop View](https://i.imgur.com/v077IQX.png)</br>
+
+
 
 
 ## Technologies
@@ -56,5 +60,3 @@ Navigate to ```localHost:3000```
   - Use local storage so saved tacos would persist on reload.
   - Add background images, and possibly find taco images online to insert into the taco component since there were none available in the API.
   - Improve the UI/UX in general, because I am not proud of this application at all.
-
-## Thanks
