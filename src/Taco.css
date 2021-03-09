@@ -6,6 +6,7 @@
   overflow-x: hidden;
   border: solid black .6rem;
   height: 70%;
+  min-width: 600px;
   max-width: 1100px;
   margin: 1rem;
   border-radius: 5px;
