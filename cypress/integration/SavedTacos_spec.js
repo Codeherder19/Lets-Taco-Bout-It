@@ -24,15 +24,13 @@ describe('Random Taco', () => {
     .get('.section-title').contains('Random Taco Generator')
   })
 
-  it('should be able to save multiple tacos to saved taco component', () => {
+  it('should be able to save multiple taco recipes to saved taco component', () => {
     cy
     .wait(2000)
     cy
     .get('.save-taco').click()
     cy
     .get('.view-saved-tacos').click()
-    cy
-    .get('.saved-taco')
     cy
     .get('div[class=saved-taco]')
     .should(($div) => {
@@ -74,5 +72,38 @@ describe('Random Taco', () => {
     .get('div[class=saved-taco]:last').contains('Taco #3')
     })
 
-    
+  it.only('should be able to delete taco recipes after saving them', () => {
+    cy
+    .wait(2000)
+    cy
+    .get('.save-taco').click()
+    cy
+    .get('.random-wacky-taco').click()
+    cy
+    .wait(2000)
+    cy
+    .get('.save-taco').click()
+    cy
+    .get('.random-wacky-taco').click()
+    cy
+    .wait(2000)
+    cy
+    .get('.save-taco').click()
+    cy
+    .get('.view-saved-tacos').click()
+    cy
+    .get('div[class=saved-taco]')
+    .should(($div) => {
+      expect($div).to.have.length(3)
+      })
+    cy
+    .get('.delete-taco[id=1]').click()
+    cy
+    .get('div[class=saved-taco]')
+    .should(($div) => {
+      expect($div).to.have.length(2)
+      })
+    cy
+    .get('div[class=saved-taco]:first').contains('Taco #2')
+    })
   });
