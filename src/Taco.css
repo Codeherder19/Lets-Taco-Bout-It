@@ -5,9 +5,8 @@
   overflow-y: scroll;
   overflow-x: hidden;
   border: solid black .6rem;
-  min-width: 640px;
   height: 70%;
-  width: 70%;
+  max-width: 1100px;
   margin: 1rem;
   border-radius: 5px;
   background-color: #B04E65;
@@ -50,4 +49,33 @@
   background-color: #6C969A;
   color: black;
   border-radius: .5rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .total-recipe-container {
+    width: 800px;
+  }
+
+  .ingredient-recipe {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .total-recipe-container {
+    width: 360px;
+    min-width: 0px;
+  }
+
+@media screen and (max-width: 470px) {
+  .total-recipe-container {
+    width: 440px;
+    height: 400px;
+    min-width: 0px;
+  }
+
+  .ingredient-recipe {
+    padding-right: 2rem;
+  }
+}
 }

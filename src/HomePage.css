@@ -7,7 +7,7 @@
 }
 
 .app-description {
-  width: 40%;
+  max-width: 600px;
   font-size: 1.5rem;
   color: #E10926;
   align-self: center;
@@ -26,4 +26,13 @@ img {
   background-color: #6C969A;
   color: #black;
   border-radius: .5rem;
+}
+
+@media screen and (max-width: 640px) {
+  img,
+  .app-description {
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
 }
