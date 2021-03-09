@@ -5,7 +5,6 @@ import Header from './Header';
 import { Route } from 'react-router-dom'
 import RandomTaco from './RandomTaco'
 import SavedTacos from './SavedTacos'
-import SavedRecipeView from './SavedRecipeView'
 
 
 
@@ -42,7 +41,6 @@ class App extends React.Component {
       }} />
       <Route path="/RandomTaco" render={ () => <RandomTaco updateSavedTacos={this.updateSavedTacos} /> } />
       <Route path="/SavedTacos" render={ () => <SavedTacos savedTacos={this.state.savedTacos} deleteSaved={this.deleteTaco}/> } />
-      <Route path="/SavedRecipeView" render={ ( { match } ) => <SavedRecipeView data={this.state.savedTacos} id={match.params.id}/>} />
     </>
   );
 }
