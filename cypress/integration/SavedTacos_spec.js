@@ -24,17 +24,17 @@ describe('Random Taco', () => {
     .get('.section-title').contains('Random Taco Generator')
   })
 
-  it.only('should be able to save multiple tacos to saved taco component', () => {
+  it('should be able to save multiple tacos to saved taco component', () => {
     cy
-    .wait(5000)
+    .wait(2000)
     cy
     .get('.save-taco').click()
     cy
     .get('.view-saved-tacos').click()
     cy
-    .get('.tiny-taco-container')
+    .get('.saved-taco')
     cy
-    .get('div[class=tiny-taco]')
+    .get('div[class=saved-taco]')
     .should(($div) => {
       expect($div).to.have.length(1)
       })
@@ -43,34 +43,36 @@ describe('Random Taco', () => {
     cy
     .get('.random-wacky-taco').click()
     cy
-    .wait(5000)
+    .wait(2000)
     cy
     .get('.save-taco').click()
     cy
     .get('.view-saved-tacos').click()
-    cy
-    .get('div[class=tiny-taco]')
+     cy
+    .get('div[class=saved-taco]')
     .should(($div) => {
       expect($div).to.have.length(2)
       })
     cy
-    .get('div[class=tiny-taco]:last').contains('Taco #2')
+    .get('div[class=saved-taco]:last').contains('Taco #2')
     cy
     .get('.back-to-random').click()
     cy
     .get('.random-wacky-taco').click()
     cy
-    .wait(5000)
+    .wait(2000)
     cy
     .get('.save-taco').click()
     cy
     .get('.view-saved-tacos').click()
     cy
-    .get('div[class=tiny-taco]')
+    .get('div[class=saved-taco]')
     .should(($div) => {
       expect($div).to.have.length(3)
       })
     cy
-    .get('div[class=tiny-taco]:last').contains('Taco #3')
+    .get('div[class=saved-taco]:last').contains('Taco #3')
     })
+
+    
   });
